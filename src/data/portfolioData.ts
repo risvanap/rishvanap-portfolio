@@ -75,6 +75,7 @@ export const PERSONAL_INFO = {
   tagline: "Technology meets creativity.",
   bio: "I'm a technology enthusiast and creative professional exploring ethical hacking, web development, graphic design, and video editing. I turn ideas into practical digital experiences through technology, design, and creativity.",
   aboutParagraph: "I'm passionate about technology, cybersecurity, and digital creativity. My interests span web development, ethical hacking, visual design, and video production. I enjoy learning new tools, solving technical problems, and building digital experiences that are both functional and visually appealing.",
+  profileImage: "/rishvan-profile.jpg",
   availability: "Available for Select Projects & Collaborations",
   email: "risvanap28@gmail.com",
   phone: "+91 8086380373",

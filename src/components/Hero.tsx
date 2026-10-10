@@ -19,7 +19,7 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [activeTab, setActiveTab] = useState<'terminal' | 'security' | 'creative'>('terminal');
+  const [activeTab, setActiveTab] = useState<'terminal' | 'security' | 'creative' | 'portrait'>('terminal');
   
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalLogs, setTerminalLogs] = useState<{ cmd: string; output: string }[]>([
@@ -111,13 +111,25 @@ export const Hero: React.FC = () => {
           {/* Left Column: Branding, Headline, Supporting Text, CTAs, Socials */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-              </span>
-              <span>AVAILABLE FOR SELECT PROJECTS</span>
+            {/* Creator Badge & Availability */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="inline-flex items-center gap-2.5 pl-1.5 pr-3.5 py-1 rounded-full bg-[#101522]/90 border border-white/10 shadow-lg shadow-black/40">
+                <img
+                  src="/rishvan-profile.jpg"
+                  alt="Rishvan A P"
+                  className="w-7 h-7 rounded-full object-cover object-[center_18%] border border-cyan-400"
+                />
+                <span className="text-xs font-semibold text-white tracking-wide">Rishvan A P</span>
+                <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">Kerala, IN</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span>AVAILABLE FOR SELECT PROJECTS</span>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -248,6 +260,14 @@ export const Hero: React.FC = () => {
                     }`}
                   >
                     Creative
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('portrait')}
+                    className={`px-2.5 py-1 rounded transition-colors ${
+                      activeTab === 'portrait' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Portrait
                   </button>
                 </div>
               </div>
@@ -422,6 +442,43 @@ export const Hero: React.FC = () => {
                   <p className="text-[10px] text-slate-400 italic pt-3 border-t border-white/10 font-mono">
                     * Designed for maximum audience retention, visual aesthetic, and brand storytelling.
                   </p>
+                </div>
+              )}
+
+              {/* Tab 4: Portrait Profile View */}
+              {activeTab === 'portrait' && (
+                <div className="p-5 bg-[#080B12]/95 min-h-[300px] flex flex-col sm:flex-row items-center gap-5 text-xs">
+                  <div className="relative w-32 h-44 rounded-xl overflow-hidden border border-cyan-500/30 shrink-0 shadow-xl shadow-cyan-500/10">
+                    <img
+                      src="/rishvan-profile.jpg"
+                      alt="Rishvan A P"
+                      className="w-full h-full object-cover object-[center_18%]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <span className="absolute bottom-2 left-2 text-[10px] text-cyan-300 font-bold font-mono">RAP</span>
+                  </div>
+
+                  <div className="flex-1 space-y-2 text-left">
+                    <div>
+                      <h4 className="font-heading font-bold text-lg text-white">{PERSONAL_INFO.name}</h4>
+                      <p className="text-[11px] text-cyan-400 font-mono">{PERSONAL_INFO.title}</p>
+                    </div>
+
+                    <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs text-slate-300">
+                      <div><span className="text-slate-400 font-mono">Location:</span> {PERSONAL_INFO.location}</div>
+                      <div><span className="text-slate-400 font-mono">Security:</span> Authorized Labs & OWASP</div>
+                      <div><span className="text-slate-400 font-mono">Dev Stack:</span> TypeScript, React, Python</div>
+                      <div><span className="text-slate-400 font-mono">Media:</span> DaVinci Resolve & Photoshop</div>
+                    </div>
+
+                    <a
+                      href="#about"
+                      className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-cyan-300 pt-2 transition-colors font-medium"
+                    >
+                      <span>Read full bio in About section</span>
+                      <ChevronRight size={14} />
+                    </a>
+                  </div>
                 </div>
               )}
 

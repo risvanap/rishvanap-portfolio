@@ -109,27 +109,31 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
               {/* Subtle top accent gradient */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500" />
 
-              {/* Profile Header Representation */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-tr from-blue-600 via-slate-800 to-cyan-500 p-[2px] shadow-xl shadow-blue-500/20 shrink-0">
-                  <div className="w-full h-full bg-[#0d1322] rounded-[14px] flex flex-col items-center justify-center p-2 text-center">
-                    <span className="font-heading font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                      RAP
-                    </span>
-                    <span className="text-[9px] text-slate-400 font-mono tracking-tighter uppercase">
-                      PORTFOLIO
-                    </span>
-                  </div>
+              {/* Profile Image & Identity Showcase */}
+              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:border-cyan-500/30 transition-colors shadow-2xl">
+                <img
+                  src="/rishvan-profile.jpg"
+                  alt="Rishvan A P Profile Photo"
+                  className="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700"
+                />
+                
+                {/* Gradient vignette overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080B12] via-[#080B12]/20 to-transparent" />
+
+                {/* Monogram Badge Top Right */}
+                <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-cyan-300 text-xs font-mono font-bold">
+                  RAP
                 </div>
 
-                <div>
-                  <h3 className="font-heading font-bold text-xl text-white">
+                {/* Bottom Photo Overlay Info */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="font-heading font-bold text-2xl text-white drop-shadow-md">
                     {PERSONAL_INFO.name}
                   </h3>
-                  <p className="text-xs text-cyan-400 font-mono mt-0.5">
-                    {PERSONAL_INFO.title.split('|')[0].trim()}
+                  <p className="text-xs text-cyan-400 font-mono mt-0.5 drop-shadow">
+                    {PERSONAL_INFO.title}
                   </p>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-2">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-300 mt-2">
                     <MapPin size={13} className="text-red-400" />
                     <span>{PERSONAL_INFO.location}</span>
                   </div>

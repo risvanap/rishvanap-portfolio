@@ -77,17 +77,24 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         <div className="p-6 sm:p-10 overflow-y-auto space-y-8 bg-[#090d17] text-slate-200 text-xs">
           
           {/* Header */}
-          <div className="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <h1 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
-                {PERSONAL_INFO.name}
-              </h1>
-              <p className="text-sm text-cyan-400 font-mono mt-1">
-                {PERSONAL_INFO.title}
-              </p>
-              <p className="text-xs text-slate-400 mt-1">
-                {PERSONAL_INFO.location}
-              </p>
+          <div className="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <img
+                src="/rishvan-profile.jpg"
+                alt="Rishvan A P"
+                className="w-16 h-16 rounded-2xl object-cover object-[center_18%] border-2 border-cyan-400 shadow-md shrink-0"
+              />
+              <div>
+                <h1 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
+                  {PERSONAL_INFO.name}
+                </h1>
+                <p className="text-sm text-cyan-400 font-mono mt-0.5">
+                  {PERSONAL_INFO.title}
+                </p>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  {PERSONAL_INFO.location}
+                </p>
+              </div>
             </div>
 
             <div className="text-right space-y-1 font-mono text-[11px] text-slate-400">
