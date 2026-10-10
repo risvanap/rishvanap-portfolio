@@ -326,7 +326,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 8086380373"
                         className="w-full bg-[#101522] border border-white/10 focus:border-cyan-400 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors"
                       />
                     </div>
