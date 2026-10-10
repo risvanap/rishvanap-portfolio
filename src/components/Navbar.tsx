@@ -53,12 +53,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, activeSection }) =
               className="flex items-center gap-3 group focus:outline-none"
               aria-label="Rishvan A P Home"
             >
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-500 p-[1.5px] shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow overflow-visible">
-                <img 
-                  src="/rishvan-profile.jpg" 
-                  alt="Rishvan A P" 
-                  className="w-full h-full object-cover object-[center_18%] rounded-[10px]" 
-                />
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-500 p-[1px] shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow">
+                <div className="w-full h-full bg-[#080B12] rounded-[11px] flex items-center justify-center">
+                  <span className="font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-sm tracking-wider">
+                    RAP
+                  </span>
+                </div>
                 {/* Subtle active status indicator */}
                 <span className="absolute -top-1 -right-1 flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -69,9 +69,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, activeSection }) =
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-base sm:text-lg tracking-tight text-white group-hover:text-blue-400 transition-colors">
                   {PERSONAL_INFO.name}
-                </span>
-                <span className="text-[11px] text-slate-400 font-mono tracking-wider uppercase hidden sm:inline-block">
-                  Security & Creative
                 </span>
               </div>
             </a>

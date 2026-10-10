@@ -15,6 +15,7 @@ import {
   Lock
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
+import { AntiGravity } from './AntiGravity';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
@@ -99,7 +100,7 @@ export const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center pt-24 pb-16 lg:py-0 overflow-hidden bg-grid-pattern"
+      className="relative min-h-screen pt-32 sm:pt-36 lg:pt-36 pb-20 overflow-hidden bg-grid-pattern flex flex-col justify-center"
     >
       {/* Background radial glow accents */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
@@ -111,25 +112,39 @@ export const Hero: React.FC = () => {
           {/* Left Column: Branding, Headline, Supporting Text, CTAs, Socials */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Creator Badge & Availability */}
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <div className="inline-flex items-center gap-2.5 pl-1.5 pr-3.5 py-1 rounded-full bg-[#101522]/90 border border-white/10 shadow-lg shadow-black/40">
-                <img
-                  src="/rishvan-profile.jpg"
-                  alt="Rishvan A P"
-                  className="w-7 h-7 rounded-full object-cover object-[center_18%] border border-cyan-400"
-                />
-                <span className="text-xs font-semibold text-white tracking-wide">Rishvan A P</span>
-                <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">Kerala, IN</span>
-              </div>
+            {/* Header with AntiGravity Floating Profile Wrapper */}
+            <div className="header mb-6">
+              <AntiGravity>
+                {/* Place the profile details ONLY inside the animation wrapper */}
+                <div 
+                  className="profile-container flex items-center gap-3.5 sm:gap-4 p-2.5 sm:p-3 pr-5 sm:pr-6 rounded-2xl bg-[#101522]/90 border border-white/15 backdrop-blur-xl shadow-2xl shadow-black/60 w-fit" 
+                  style={{ position: 'relative', zIndex: 10 }}
+                >
+                  <img 
+                    src="/rishvan-profile.jpg" 
+                    alt="Rishvan A P" 
+                    className="profile-img w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover object-[center_18%] border-2 border-cyan-400 shadow-md shrink-0" 
+                  />
+                  <div className="profile-details flex flex-col justify-center">
+                    <h3 className="text-xs font-medium text-slate-300">Rishvan A P</h3>
+                    <h1 className="font-heading font-black text-lg sm:text-xl text-white tracking-tight leading-tight">
+                      RISHVAN A P
+                    </h1>
+                    <p className="text-[10px] sm:text-[11px] font-mono tracking-wider text-cyan-400 uppercase mt-0.5">
+                      SECURITY & CREATIVE
+                    </p>
+                  </div>
+                </div>
+              </AntiGravity>
+            </div>
 
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-mono uppercase tracking-wider">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                <span>AVAILABLE FOR SELECT PROJECTS</span>
-              </div>
+            {/* Availability Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+              </span>
+              <span>AVAILABLE FOR SELECT PROJECTS</span>
             </div>
 
             {/* Main Headline */}
