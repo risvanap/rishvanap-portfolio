@@ -7,8 +7,6 @@ import {
   Film, 
   Mail, 
   ChevronRight, 
-  Copy, 
-  Check, 
   Sparkles,
   Cpu,
   Layers,
@@ -19,7 +17,6 @@ import { AntiGravity } from './AntiGravity';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
-  const [copiedEmail, setCopiedEmail] = useState(false);
   const [activeTab, setActiveTab] = useState<'terminal' | 'security' | 'creative' | 'portrait'>('terminal');
   
   const [terminalInput, setTerminalInput] = useState('');
@@ -60,12 +57,6 @@ export const Hero: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, [displayedSnippet, isDeleting, currentSnippetIndex]);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(PERSONAL_INFO.email);
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
 
   const handleRunCommand = (e: React.FormEvent) => {
     e.preventDefault();
@@ -216,15 +207,14 @@ export const Hero: React.FC = () => {
                   <InstagramIcon size={18} />
                 </a>
 
-                <button
-                  onClick={handleCopyEmail}
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 text-xs font-mono transition-colors"
-                  title="Click to copy email address"
+                <a
+                  href={`mailto:${PERSONAL_INFO.email}`}
+                  className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors"
+                  aria-label="Email"
+                  title={`Email: ${PERSONAL_INFO.email}`}
                 >
-                  <Mail size={16} className="text-cyan-400" />
-                  <span className="hidden sm:inline">{PERSONAL_INFO.email}</span>
-                  {copiedEmail ? <Check size={14} className="text-green-400" /> : <Copy size={14} className="text-slate-400" />}
-                </button>
+                  <Mail size={18} />
+                </a>
               </div>
 
               <div className="ml-auto hidden xl:flex items-center gap-2 text-xs text-slate-400 font-mono">
