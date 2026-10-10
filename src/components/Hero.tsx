@@ -500,22 +500,22 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Quick 4-Discipline Micro Badges below Terminal */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full mt-4">
-              <div className="p-2.5 rounded-xl bg-[#101522]/90 border border-white/10 flex items-center gap-2">
-                <ShieldCheck size={16} className="text-cyan-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Cybersecurity</span>
+            <div className="grid grid-cols-2 gap-2.5 w-full mt-4">
+              <div className="p-3 rounded-xl bg-[#101522]/90 border border-white/10 hover:border-cyan-500/30 flex items-center gap-2.5 transition-colors group min-w-0">
+                <ShieldCheck size={18} className="text-cyan-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-xs text-slate-200 font-medium truncate">Cybersecurity</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-[#101522]/90 border border-white/10 flex items-center gap-2">
-                <Code size={16} className="text-blue-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Web Dev</span>
+              <div className="p-3 rounded-xl bg-[#101522]/90 border border-white/10 hover:border-blue-500/30 flex items-center gap-2.5 transition-colors group min-w-0">
+                <Code size={18} className="text-blue-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-xs text-slate-200 font-medium truncate">Web Development</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-[#101522]/90 border border-white/10 flex items-center gap-2">
-                <Palette size={16} className="text-purple-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Graphic Design</span>
+              <div className="p-3 rounded-xl bg-[#101522]/90 border border-white/10 hover:border-purple-500/30 flex items-center gap-2.5 transition-colors group min-w-0">
+                <Palette size={18} className="text-purple-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-xs text-slate-200 font-medium truncate">Graphic Design</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-[#101522]/90 border border-white/10 flex items-center gap-2">
-                <Film size={16} className="text-pink-400 shrink-0" />
-                <span className="text-xs text-slate-300 font-medium">Video Editing</span>
+              <div className="p-3 rounded-xl bg-[#101522]/90 border border-white/10 hover:border-pink-500/30 flex items-center gap-2.5 transition-colors group min-w-0">
+                <Film size={18} className="text-pink-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-xs text-slate-200 font-medium truncate">Video Editing</span>
               </div>
             </div>
 
