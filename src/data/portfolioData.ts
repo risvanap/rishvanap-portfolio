@@ -81,8 +81,8 @@ export const PERSONAL_INFO = {
   phone: "+91 8086380373",
   whatsappUrl: "https://wa.me/918086380373?text=Hi%20Rishvan,%20I%20would%20like%20to%20discuss%20a%20project",
   githubUrl: "https://github.com/risvanap",
-  linkedinUrl: "https://linkedin.com/in/rishvan-ap",
-  instagramUrl: "https://instagram.com/rishvan.creates",
+  linkedinUrl: "https://www.linkedin.com/in/rishvanap",
+  instagramUrl: "https://www.instagram.com/risvan_ap",
   stats: [
     { label: "Core Disciplines", value: "4 Pillars" },
     { label: "Security & Dev Labs", value: "15+ Modules" },

@@ -110,6 +110,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 <Globe size={12} className="text-cyan-400" />
                 <span>github.com/risvanap</span>
               </div>
+              <div className="flex items-center sm:justify-end gap-1.5">
+                <Globe size={12} className="text-cyan-400" />
+                <span>linkedin.com/in/rishvanap</span>
+              </div>
             </div>
           </div>
 
