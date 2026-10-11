@@ -11,6 +11,7 @@ import {
   Terminal
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 
 interface AboutSectionProps {
   onOpenResume: () => void;
@@ -153,6 +154,47 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
                 <div className="flex items-center justify-between p-2.5 rounded-lg bg-white/5">
                   <span className="text-slate-400">Work Philosophy</span>
                   <span className="font-medium text-cyan-300">"Technology meets creativity"</span>
+                </div>
+              </div>
+
+              {/* Social Profiles */}
+              <div className="pt-4 border-t border-white/10 mb-4 flex items-center justify-between">
+                <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+                  Social Profiles:
+                </span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={PERSONAL_INFO.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 hover:border-slate-400 transition-all shadow-sm"
+                    aria-label="GitHub Profile"
+                    title="GitHub"
+                  >
+                    <GithubIcon size={16} />
+                  </a>
+
+                  <a
+                    href={PERSONAL_INFO.linkedinUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2.5 rounded-xl bg-white/5 hover:bg-blue-600/15 text-slate-300 hover:text-blue-400 border border-white/10 hover:border-blue-500/40 transition-all shadow-sm"
+                    aria-label="LinkedIn Profile"
+                    title="LinkedIn"
+                  >
+                    <LinkedinIcon size={16} className="text-blue-400" />
+                  </a>
+
+                  <a
+                    href={PERSONAL_INFO.instagramUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2.5 rounded-xl bg-white/5 hover:bg-pink-600/15 text-slate-300 hover:text-pink-400 border border-white/10 hover:border-pink-500/40 transition-all shadow-sm"
+                    aria-label="Instagram Profile"
+                    title="Instagram"
+                  >
+                    <InstagramIcon size={16} className="text-pink-400" />
+                  </a>
                 </div>
               </div>
 

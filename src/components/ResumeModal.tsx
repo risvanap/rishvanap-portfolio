@@ -7,6 +7,7 @@ import {
   Globe 
 } from 'lucide-react';
 import { PERSONAL_INFO, SKILL_CATEGORIES, PROJECTS, JOURNEY_MILESTONES } from '../data/portfolioData';
+import { LinkedinIcon, InstagramIcon } from './Icons';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -106,13 +107,37 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 <Phone size={12} className="text-cyan-400" />
                 <span>{PERSONAL_INFO.phone}</span>
               </div>
-              <div className="flex items-center sm:justify-end gap-1.5">
-                <Globe size={12} className="text-cyan-400" />
-                <span>github.com/risvanap</span>
-              </div>
-              <div className="flex items-center sm:justify-end gap-1.5">
-                <Globe size={12} className="text-cyan-400" />
-                <span>linkedin.com/in/rishvanap</span>
+              <div className="flex items-center sm:justify-end gap-2 pt-1">
+                <a
+                  href={PERSONAL_INFO.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-cyan-400 border border-white/10 transition-colors"
+                  aria-label="GitHub Profile"
+                  title="GitHub"
+                >
+                  <Globe size={13} className="text-cyan-400" />
+                </a>
+                <a
+                  href={PERSONAL_INFO.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-blue-400 border border-white/10 transition-colors"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn"
+                >
+                  <LinkedinIcon size={13} className="text-blue-400" />
+                </a>
+                <a
+                  href={PERSONAL_INFO.instagramUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-pink-400 border border-white/10 transition-colors"
+                  aria-label="Instagram Profile"
+                  title="Instagram"
+                >
+                  <InstagramIcon size={13} className="text-pink-400" />
+                </a>
               </div>
             </div>
           </div>

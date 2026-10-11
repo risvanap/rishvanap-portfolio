@@ -6,6 +6,7 @@ import {
   ArrowUpRight 
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { LinkedinIcon, InstagramIcon } from './Icons';
 
 interface NavbarProps {
   onOpenResume: () => void;
@@ -93,8 +94,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, activeSection }) =
               })}
             </nav>
 
-            {/* Actions: Resume & Let's Talk CTA */}
-            <div className="hidden sm:flex items-center gap-3">
+            {/* Actions: Social Profiles, Resume & Let's Talk CTA */}
+            <div className="hidden sm:flex items-center gap-2.5">
+              <div className="hidden md:flex items-center gap-1 pr-2 border-r border-white/10">
+                <a
+                  href={PERSONAL_INFO.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-xl text-slate-400 hover:text-blue-400 hover:bg-white/5 border border-transparent hover:border-blue-500/30 transition-all"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn: www.linkedin.com/in/rishvanap"
+                >
+                  <LinkedinIcon size={15} />
+                </a>
+                <a
+                  href={PERSONAL_INFO.instagramUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-xl text-slate-400 hover:text-pink-400 hover:bg-white/5 border border-transparent hover:border-pink-500/30 transition-all"
+                  aria-label="Instagram Profile"
+                  title="Instagram: @risvan_ap"
+                >
+                  <InstagramIcon size={15} />
+                </a>
+              </div>
+
               <button
                 onClick={onOpenResume}
                 className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:border-slate-500"
@@ -164,6 +188,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, activeSection }) =
           </div>
 
           <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
+            {/* Social Profiles in Mobile Drawer */}
+            <div className="flex items-center justify-center gap-3 pb-2">
+              <a
+                href={PERSONAL_INFO.linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-blue-400 hover:border-blue-500/40 transition-colors"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn"
+              >
+                <LinkedinIcon size={18} className="text-blue-400" />
+              </a>
+              <a
+                href={PERSONAL_INFO.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-pink-400 hover:border-pink-500/40 transition-colors"
+                aria-label="Instagram Profile"
+                title="Instagram"
+              >
+                <InstagramIcon size={18} className="text-pink-400" />
+              </a>
+            </div>
+
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

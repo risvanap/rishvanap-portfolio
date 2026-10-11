@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Maximize2, 
-  Camera
+  Camera 
 } from 'lucide-react';
 import { CREATIVE_GALLERY_ITEMS } from '../data/portfolioData';
 import type { CreativeItem } from '../data/portfolioData';

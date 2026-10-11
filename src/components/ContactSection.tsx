@@ -203,35 +203,39 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                 <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">
                   Social Profiles:
                 </span>
+
                 <div className="flex items-center gap-3">
                   <a
                     href={PERSONAL_INFO.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors flex items-center gap-2 text-xs"
+                    className="w-11 h-11 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 hover:border-slate-400 transition-all flex items-center justify-center group shadow-sm"
+                    aria-label="GitHub Profile"
+                    title="GitHub"
                   >
-                    <GithubIcon size={16} />
-                    <span>GitHub</span>
+                    <GithubIcon size={18} className="group-hover:scale-110 transition-transform" />
                   </a>
 
                   <a
                     href={PERSONAL_INFO.linkedinUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors flex items-center gap-2 text-xs"
+                    className="w-11 h-11 rounded-xl bg-white/5 hover:bg-blue-600/15 text-slate-300 hover:text-blue-400 border border-white/10 hover:border-blue-500/40 transition-all flex items-center justify-center group shadow-sm"
+                    aria-label="LinkedIn Profile"
+                    title="LinkedIn"
                   >
-                    <LinkedinIcon size={16} />
-                    <span>LinkedIn</span>
+                    <LinkedinIcon size={18} className="text-blue-400 group-hover:scale-110 transition-transform" />
                   </a>
 
                   <a
                     href={PERSONAL_INFO.instagramUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors flex items-center gap-2 text-xs"
+                    className="w-11 h-11 rounded-xl bg-white/5 hover:bg-pink-600/15 text-slate-300 hover:text-pink-400 border border-white/10 hover:border-pink-500/40 transition-all flex items-center justify-center group shadow-sm"
+                    aria-label="Instagram Profile"
+                    title="Instagram"
                   >
-                    <InstagramIcon size={16} />
-                    <span>Instagram</span>
+                    <InstagramIcon size={18} className="text-pink-400 group-hover:scale-110 transition-transform" />
                   </a>
                 </div>
               </div>

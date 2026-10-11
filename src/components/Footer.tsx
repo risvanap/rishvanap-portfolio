@@ -77,8 +77,9 @@ export const Footer: React.FC = () => {
                 href={PERSONAL_INFO.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors"
-                aria-label="GitHub"
+                className="p-2.5 rounded-xl bg-white/5 hover:bg-cyan-600/10 text-slate-400 hover:text-cyan-400 border border-white/10 hover:border-cyan-500/30 transition-all"
+                aria-label="GitHub Profile"
+                title="GitHub: github.com/risvanap"
               >
                 <GithubIcon size={16} />
               </a>
@@ -86,8 +87,9 @@ export const Footer: React.FC = () => {
                 href={PERSONAL_INFO.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors"
-                aria-label="LinkedIn"
+                className="p-2.5 rounded-xl bg-white/5 hover:bg-blue-600/10 text-slate-400 hover:text-blue-400 border border-white/10 hover:border-blue-500/30 transition-all"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn: www.linkedin.com/in/rishvanap"
               >
                 <LinkedinIcon size={16} />
               </a>
@@ -95,8 +97,9 @@ export const Footer: React.FC = () => {
                 href={PERSONAL_INFO.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors"
-                aria-label="Instagram"
+                className="p-2.5 rounded-xl bg-white/5 hover:bg-pink-600/10 text-slate-400 hover:text-pink-400 border border-white/10 hover:border-pink-500/30 transition-all"
+                aria-label="Instagram Profile"
+                title="Instagram: https://www.instagram.com/risvan_ap (@risvan_ap)"
               >
                 <InstagramIcon size={16} />
               </a>

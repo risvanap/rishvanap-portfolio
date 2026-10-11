@@ -83,6 +83,29 @@ export const PERSONAL_INFO = {
   githubUrl: "https://github.com/risvanap",
   linkedinUrl: "https://www.linkedin.com/in/rishvanap",
   instagramUrl: "https://www.instagram.com/risvan_ap",
+  socialProfiles: [
+    {
+      name: "LinkedIn",
+      handle: "in/rishvanap",
+      url: "https://www.linkedin.com/in/rishvanap",
+      fullUrlDisplay: "www.linkedin.com/in/rishvanap",
+      description: "Professional networking & security research"
+    },
+    {
+      name: "Instagram",
+      handle: "@risvan_ap",
+      url: "https://www.instagram.com/risvan_ap",
+      fullUrlDisplay: "instagram.com/risvan_ap",
+      description: "Visual creatives, posters & cinematic video reels"
+    },
+    {
+      name: "GitHub",
+      handle: "risvanap",
+      url: "https://github.com/risvanap",
+      fullUrlDisplay: "github.com/risvanap",
+      description: "Source code & cybersecurity projects"
+    }
+  ],
   stats: [
     { label: "Core Disciplines", value: "4 Pillars" },
     { label: "Security & Dev Labs", value: "15+ Modules" },

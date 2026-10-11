@@ -65,7 +65,13 @@ export const Hero: React.FC = () => {
 
     let output = '';
     if (cmd === 'help') {
-      output = 'Available commands: about, skills, projects, services, contact, clear, date';
+      output = 'Available commands: about, skills, projects, services, socials, contact, clear, date';
+    } else if (cmd === 'socials' || cmd === 'social' || cmd === 'links') {
+      output = `LinkedIn: ${PERSONAL_INFO.linkedinUrl} | Instagram: ${PERSONAL_INFO.instagramUrl} | GitHub: ${PERSONAL_INFO.githubUrl}`;
+    } else if (cmd === 'linkedin') {
+      output = `LinkedIn Profile: ${PERSONAL_INFO.linkedinUrl} (www.linkedin.com/in/rishvanap)`;
+    } else if (cmd === 'instagram') {
+      output = `Instagram Profile: ${PERSONAL_INFO.instagramUrl} (@risvan_ap)`;
     } else if (cmd === 'about') {
       output = `${PERSONAL_INFO.aboutParagraph} Location: ${PERSONAL_INFO.location}`;
     } else if (cmd === 'skills') {
@@ -178,9 +184,9 @@ export const Hero: React.FC = () => {
                   href={PERSONAL_INFO.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 hover:border-slate-400 transition-all shadow-sm"
                   aria-label="GitHub Profile"
-                  title="GitHub"
+                  title="GitHub: github.com/risvanap"
                 >
                   <GithubIcon size={18} />
                 </a>
@@ -189,9 +195,9 @@ export const Hero: React.FC = () => {
                   href={PERSONAL_INFO.linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-blue-600/15 text-slate-300 hover:text-blue-400 border border-white/10 hover:border-blue-500/40 transition-all shadow-sm"
                   aria-label="LinkedIn Profile"
-                  title="LinkedIn"
+                  title="LinkedIn: www.linkedin.com/in/rishvanap"
                 >
                   <LinkedinIcon size={18} />
                 </a>
@@ -200,16 +206,16 @@ export const Hero: React.FC = () => {
                   href={PERSONAL_INFO.instagramUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-pink-600/15 text-slate-300 hover:text-pink-400 border border-white/10 hover:border-pink-500/40 transition-all shadow-sm"
                   aria-label="Instagram Profile"
-                  title="Instagram"
+                  title="Instagram: https://www.instagram.com/risvan_ap (@risvan_ap)"
                 >
                   <InstagramIcon size={18} />
                 </a>
 
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-cyan-600/15 text-slate-300 hover:text-cyan-400 border border-white/10 hover:border-cyan-500/40 transition-all shadow-sm"
                   aria-label="Email"
                   title={`Email: ${PERSONAL_INFO.email}`}
                 >
