@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
                   style={{ position: 'relative', zIndex: 10 }}
                 >
                   <img 
-                    src="/rishvan-profile.jpg" 
+                    src={PERSONAL_INFO.profileImage} 
                     alt="Rishvan A P" 
                     className="profile-img w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover object-[center_18%] border-2 border-cyan-400 shadow-md shrink-0" 
                   />
@@ -461,7 +461,7 @@ export const Hero: React.FC = () => {
                 <div className="p-5 bg-[#080B12]/95 min-h-[300px] flex flex-col sm:flex-row items-center gap-5 text-xs">
                   <div className="relative w-32 h-44 rounded-xl overflow-hidden border border-cyan-500/30 shrink-0 shadow-xl shadow-cyan-500/10">
                     <img
-                      src="/rishvan-profile.jpg"
+                      src={PERSONAL_INFO.profileImage}
                       alt="Rishvan A P"
                       className="w-full h-full object-cover object-[center_18%]"
                     />

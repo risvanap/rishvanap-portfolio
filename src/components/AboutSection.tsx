@@ -113,7 +113,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
               {/* Profile Image & Identity Showcase */}
               <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:border-cyan-500/30 transition-colors shadow-2xl">
                 <img
-                  src="/rishvan-profile.jpg"
+                  src={PERSONAL_INFO.profileImage}
                   alt="Rishvan A P Profile Photo"
                   className="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-700"
                 />

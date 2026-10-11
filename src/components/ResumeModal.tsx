@@ -81,7 +81,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <img
-                src="/rishvan-profile.jpg"
+                src={PERSONAL_INFO.profileImage}
                 alt="Rishvan A P"
                 className="w-16 h-16 rounded-2xl object-cover object-[center_18%] border-2 border-cyan-400 shadow-md shrink-0"
               />
